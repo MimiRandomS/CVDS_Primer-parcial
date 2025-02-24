@@ -35,11 +35,30 @@ Se debe crear un repositorio en GitHub el cual debe tener un proyecto maven que 
 3. El proyecto debe contar con el diseño documentado en el readme del repositorio y debe terner capturas de pantalla mostrando su funcionamiento.
 
 ---
+## Diseño
+Se decidio estructurar el diagrama de clases de la aplicacion de la siguiente manera:
+![image](assets/diagrama.png)
+Los patrones de diseño que se usaron fueron Singleton en AgentLog, AgentWarning y SystemMonitoringStock. Esto porque dentro de la aplicacion solo hay un sistema de inventarios / stock (SystemMonitoringStock) y solo hay un agente (AgentLog) que notifica del inventario y solo hay un agente (AgentWarning) que notifica cuando el inventario es bajo
+
 
 ## Solucion del parcial
 1. Se crea la estructura del proyecto usando springboot e integrando jacoco
+![image](assets/1.png)
 2. Se definen las clases para usar: producto, Agent (interface), AgentLog, AgentWarning y SystemMonitoringStock.
+![image](assets/2.png)
 3. Se crean los metodos que se usaran para resolver los requerimientos y se documenta lo que se espera de ellas.
-4. Se crean las pruebas unitarias de los metodos previamente creados
+![image](assets/3.png)
+4. Se crean las pruebas unitarias de los metodos previamente creados y las pruebas fallan.
+![image](assets/4.png)
+![image](assets/5.png)
+5. Se escribe el codigo minimo para que pasen correctamente las pruebas.
+![image](assets/6.png)
+6. Las pruebas pasan correctamente.
+![image](assets/7.png)
+7. Jacoco 85%
+![image](assets/8.png)
+
+
+
 
 
